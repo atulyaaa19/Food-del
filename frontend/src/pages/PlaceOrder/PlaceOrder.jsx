@@ -53,7 +53,6 @@ const PlaceOrder = () => {
                 navigate(session_url);
             }
             else {
-                navigate("/");
                 toast.error("Something Went Wrong")
             }
         }
@@ -65,7 +64,6 @@ const PlaceOrder = () => {
                 setCartItems({});
             }
             else {
-                navigate("/");
                 toast.error("Something Went Wrong")
             }
         }
