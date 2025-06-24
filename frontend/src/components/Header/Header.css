@@ -1,55 +1,77 @@
-.header{
-    height: 34vw;
-    margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size:contain;
+.header {
     position: relative;
+    height: 40vw;
+    max-height: 600px;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
 }
-.header-contents{
+
+.header-contents {
     position: absolute;
+    left: 5vw;
+    bottom: 15%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
-    animation: fadeIn 3s;
+    max-width: 40%;
+    animation: fadeIn 3s ease;
 }
-.header-contents h2{
-    font-weight:500;
-    color: white;
-    font-size: max(4.5vw,22px);
+
+.header-contents h2 {
+    font-weight: 600;
+    font-size: max(3.5vw, 24px);
+    color: #ffffff;
+    line-height: 1.2;
 }
-.header-contents p{
-    color: white;
-    font-size: 1vw;
+
+.header-contents p {
+    font-size: max(1vw, 14px);
+    color: #f5f5f5;
+    max-width: 90%;
 }
-.header-contents button{
+
+.header-contents button {
     border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background: white;
-    font-size: max(1vw,13px);
-    border-radius: 50px;
+    font-weight: 600;
+    font-size: max(1vw, 14px);
+    padding: 0.8vw 2vw;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-@media (max-width:1050px) {
-    .header{
-        height: 38vw;
+
+.header-contents button:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 1050px) {
+    .header {
+        height: 50vw;
     }
-    .header-contents{
-        max-width: 45%;
+    .header-contents {
+        max-width: 50%;
     }
 }
-@media(max-width:750px){
-    .header-contents{
-        max-width: 55%;
+
+@media (max-width: 750px) {
+    .header {
+        height: 60vw;
     }
-    .header-contents p{
-       display: none;
+    .header-contents {
+        max-width: 60%;
+        left: 4vw;
+        bottom: 12%;
     }
-    .header-contents button{
+    .header-contents p {
+        display: none;
+    }
+    .header-contents button {
         padding: 2vw 4vw;
     }
 }

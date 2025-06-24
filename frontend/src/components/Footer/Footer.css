@@ -52,3 +52,8 @@
         text-align: center;
     }
 }
+.footer-content-left img {
+    max-width: 150px; /* Adjust this value as needed */
+    height: auto;
+    object-fit: contain;
+}
