@@ -46,10 +46,16 @@ const PlaceOrder = () => {
             items: orderItems,
             amount: getTotalCartAmount() + deliveryCharge,
         }
+
         if (payment === "stripe") {
             let response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
             if (response.data.success) {
                 const { session_url } = response.data;
+                if (session_url) {
+               window.location.href = session_url;
+            } else {
+               toast.error("Invalid Stripe Session URL.");
+                 }
                 navigate(session_url);
             }
             else {
